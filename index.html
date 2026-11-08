@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienestar pa' su merce - Hábitos de Vida Saludable y Bienestar</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emeraldCustom: '#ecfdf5',
+                        darkText: '#0f172a',
+                        mutedText: '#334155',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #ecfdf5; color: #0f172a; }
+        .bg-glow-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+        }
+        .text-gradient-vibrant {
+            background: linear-gradient(90deg, #059669 0%, #0d9488 40%, #2563eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .text-gradient-fire {
+            background: linear-gradient(90deg, #059669, #d97706);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-emerald-500 selection:text-white">
+
+    <!-- Header Flotante -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-emerald-500/20 shadow-sm transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-500 via-teal-500 to-amber-500 p-[2px] shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition-transform">
+                        <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center">
+                            <svg class="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                        </div>
+                    </div>
+                    <span class="font-black text-2xl tracking-tight text-slate-900">Bienestar <span class="text-gradient-fire">pa'</span> su merce</span>
+                </a>
+                <nav class="hidden lg:flex items-center space-x-6 font-bold text-sm text-slate-700">
+                    <a href="#bienestar" class="hover:text-emerald-600 transition">Bienestar</a>
+                    <a href="#ejercicios" class="hover:text-emerald-600 transition">Ejercicios</a>
+                    <a href="#nutrientes" class="hover:text-emerald-600 transition">Nutrición & Macros</a>
+                    <a href="#recetas" class="hover:text-emerald-600 transition">Recetas</a>
+                    <a href="#enfermedades" class="hover:text-emerald-600 transition">Salud Clínica</a>
+                    <a href="#expertos" class="hover:text-emerald-600 transition">Expertos</a>
+                </nav>
+                <div class="hidden md:flex items-center">
+                    <a href="#bienestar" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-extrabold text-sm shadow-lg shadow-emerald-600/20 hover:scale-105 transition">Explorar Gratis</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-28 pb-20 px-4 overflow-hidden bg-gradient-to-br from-emerald-100 via-emerald-50 to-teal-100">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-400/20 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-teal-400/20 rounded-full blur-[120px]"></div>
+
+        <div class="max-w-5xl mx-auto text-center z-10">
+            <span class="inline-block py-2 px-6 rounded-full bg-white/80 border border-emerald-400/40 text-emerald-700 font-black text-xs sm:text-sm uppercase tracking-widest mb-6 shadow-md backdrop-blur-md">
+                ⚡ Plataforma 100% Gratuita & Libre Acceso
+            </span>
+            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight mb-8 leading-none text-slate-900">
+                Transforma tu vida, <br><span class="text-gradient-vibrant">un hábito a la vez.</span>
+            </h1>
+            <p class="text-xl sm:text-3xl text-slate-700 max-w-3xl mx-auto font-light mb-12 italic">
+                "Tu transformación comienza con una pequeña decisión hoy."
+            </p>
+            <div class="flex justify-center">
+                <a href="#bienestar" class="px-10 py-5 bg-gradient-to-r from-emerald-600 via-teal-600 to-amber-500 text-white font-black rounded-2xl shadow-xl shadow-emerald-600/30 hover:scale-105 transition-all text-lg">
+                    Explora el Contenido Gratuito
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Franja Motivadora -->
+    <div class="bg-gradient-to-r from-emerald-700 via-teal-700 to-amber-600 py-6 text-white font-black text-center px-4 shadow-md text-lg sm:text-2xl uppercase tracking-wider">
+        🔥 "La salud no se trata de perder peso, sino de ganar vida, energía y claridad mental."
+    </div>
+
+    <!-- Bienestar y Estilo de Vida -->
+    <section id="bienestar" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-xs font-black uppercase tracking-widest text-emerald-600 mb-3">Equilibrio Mente y Cuerpo</h2>
+            <h3 class="text-4xl sm:text-5xl font-black text-slate-900 mb-4">Bienestar y Estilo de Vida Saludable</h3>
+            <p class="text-slate-600 text-lg">Haz clic en "Aprender más" en cada tarjeta para desplegar contenido detallado basado en ciencia.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-glow-card rounded-3xl p-8 border-l-4 border-emerald-500 transition flex flex-col justify-between">
+                <div>
+                    <div class="w-16 h-16 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-3xl font-black mb-6">🌱</div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-3">Higiene del Sueño</h4>
+                    <p class="text-slate-700 text-sm leading-relaxed mb-6">El descanso profundo repara tejidos, equilibra tus hormonas del hambre (grelina y leptina) y mejora tu agilidad mental.</p>
+                </div>
+                <button onclick="abrirModalBienestar('Higiene del Sueño y Descanso Celular', 'El sueño no es un lujo, es una necesidad biológica crítica. Dormir entre 7 y 9 horas optimiza la limpieza de toxinas en el cerebro a través del sistema glinfático, regula la sensibilidad a la insulina y fortalece el sistema inmunitario. Consejos clave: apaga pantallas 1 hora antes de dormir, mantén la habitación oscura y a una temperatura fresca de 18°C.')" class="text-emerald-600 font-bold text-sm inline-flex items-center gap-1 hover:underline text-left">Aprender más →</button>
+            </div>
+            <div class="bg-glow-card rounded-3xl p-8 border-l-4 border-teal-500 transition flex flex-col justify-between">
+                <div>
+                    <div class="w-16 h-16 rounded-2xl bg-teal-100 text-teal-600 flex items-center justify-center text-3xl font-black mb-6">🧠</div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-3">Control del Estrés Crónico</h4>
+                    <p class="text-slate-700 text-sm leading-relaxed mb-6">Estrategias efectivas para reducir los niveles descontrolados de cortisol y proteger tu sistema cardiovascular.</p>
+                </div>
+                <button onclick="abrirModalBienestar('Gestión Científica del Estrés', 'El estrés prolongado eleva el cortisol de forma crónica, lo que genera acumulación de grasa visceral, presión arterial alta e inflamación sistémica. Para contrarrestarlo, practica respiración diafragmática (técnica 4-7-8), haz caminatas al aire libre y mantén una red de apoyo social sólida.')" class="text-teal-600 font-bold text-sm inline-flex items-center gap-1 hover:underline text-left">Aprender más →</button>
+            </div>
+            <div class="bg-glow-card rounded-3xl p-8 border-l-4 border-amber-500 transition flex flex-col justify-between">
+                <div>
+                    <div class="w-16 h-16 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center text-3xl font-black mb-6">⚡</div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-3">Ritmos Circadianos</h4>
+                    <p class="text-slate-700 text-sm leading-relaxed mb-6">Aprovecha la luz solar matutina para programar tu reloj biológico y potenciar la producción natural de melatonina de noche.</p>
+                </div>
+                <button onclick="abrirModalBienestar('Sincronización de los Ritmos Circadianos', 'Tu cuerpo funciona con un reloj maestro ubicado en el cerebro (núcleo supraquiasmático). Exponerte a la luz solar natural durante los primeros 30 minutos tras despertar le indica a tu organismo que es hora de estar alerta y regula tus ciclos de sueño para descansar profundamente por la noche.')" class="text-amber-600 font-bold text-sm inline-flex items-center gap-1 hover:underline text-left">Aprender más →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ejercicios en Casa (3 Videos Incrustados 100% Visibles, con Audio y en Español) -->
+    <section id="ejercicios" class="py-24 bg-gradient-to-b from-emerald-100/50 via-emerald-50 to-emerald-100/50 relative border-y border-emerald-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-black uppercase tracking-widest text-emerald-600 mb-3">Movimiento sin límites</h2>
+                <h3 class="text-4xl sm:text-5xl font-black text-slate-900 mb-4">Ejercicios para que estes joya desde tu casa</h3>
+                <p class="text-slate-600 text-lg">Reproduce los tres videos directamente aquí mismo. Guiados por profesionales 100% en español.</p>
+            </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- Video 1: Cardio HIIT en Español -->
+                <div class="bg-glow-card rounded-3xl overflow-hidden border border-emerald-200 flex flex-col shadow-xl">
+                    <div class="relative w-full aspect-video bg-black">
+                        <iframe class="absolute top-0 left-0 w-full h-full"
+                                
+                            title="Cardio HIIT en español"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-black rounded-full uppercase">Quemar Grasa</span>
+                            <h4 class="text-xl font-bold text-slate-900 mt-3 mb-2">Cardio HIIT Quema-Grasa</h4>
+                            <p class="text-slate-600 text-sm">Rutina cardiovascular de alta intensidad guiada paso a paso en español.</p>
+                        </div>
+                        <a href="https://youtu.be/cICL84J38as?si=xyyO5VE7h4Eg8D66" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-emerald-600 font-bold hover:underline">
+                            Ver en YouTube
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Video 2: Yoga y Estiramiento en Español -->
+                <div class="bg-glow-card rounded-3xl overflow-hidden border border-emerald-200 flex flex-col shadow-xl">
+                    <div class="relative w-full aspect-video bg-black">
+                        <iframe class="absolute top-0 left-0 w-full h-full"
+                              
+                            title="Yoga y estiramiento en español"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="px-3 py-1 bg-teal-100 text-teal-800 text-xs font-black rounded-full uppercase">Flexibilidad</span>
+                            <h4 class="text-xl font-bold text-slate-900 mt-3 mb-2">Yoga y Estiramiento Zen</h4>
+                            <p class="text-slate-600 text-sm">Sesión enfocada en movilidad articular y relajación corporal en español.</p>
+                        </div>
+                        <a href="https://youtu.be/K_8PuY5m1LI?si=ekk86uuws87xC23k" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-teal-600 font-bold hover:underline">
+                            Ver en YouTube
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Video 3: Fuerza y Tonificación en Español -->
+                <div class="bg-glow-card rounded-3xl overflow-hidden border border-emerald-200 flex flex-col shadow-xl">
+                    <div class="relative w-full aspect-video bg-black">
+                        <iframe class="absolute top-0 left-0 w-full h-full"
+                           
+                            title="Fuerza en casa en español"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-black rounded-full uppercase">Fuerza Magra</span>
+                            <h4 class="text-xl font-bold text-slate-900 mt-3 mb-2">Fuerza y Tonificación Total</h4>
+                            <p class="text-slate-600 text-sm">Ejercicios orientados a ganar resistencia muscular explicados en español.</p>
+                        </div>
+                        <a href="https://youtu.be/BtEzj1ppTdE?si=EGZ8iTn9OQDzi6e4" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-amber-600 font-bold hover:underline">
+                            Ver en YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-rose-100 to-white border border-rose-200 p-8 rounded-3xl shadow-xl">
+                    <span class="px-4 py-1.5 bg-rose-600 text-white text-xs font-black rounded-full uppercase tracking-wider mb-4 inline-block">Meta 1: Bajar de Peso (Déficit)</span>
+                    <h4 class="text-2xl font-black text-slate-900 mb-3">Rutina Diaria Quema-Grasa</h4>
+                    <p class="text-slate-700 text-sm mb-4">Combina cardio explosivo con control de calorías diarias para reducir porcentaje de grasa sin perder músculo.</p>
+                    <ul class="text-sm space-y-2 text-rose-900 font-medium">
+                        <li>🔥 <b>Frecuencia:</b> 4 a 5 días por semana.</li>
+                        <li>⏱️ <b>Estructura:</b> 30 min de circuitos HIIT + 15 min de fuerza funcional.</li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-emerald-100 to-white border border-emerald-200 p-8 rounded-3xl shadow-xl">
+                    <span class="px-4 py-1.5 bg-emerald-600 text-white text-xs font-black rounded-full uppercase tracking-wider mb-4 inline-block">Meta 2: Mantenerse & Tonificar</span>
+                    <h4 class="text-2xl font-black text-slate-900 mb-3">Rutina Diaria de Mantenimiento</h4>
+                    <p class="text-slate-700 text-sm mb-4">Mantiene la ingesta calórica de equilibrio mientras construye fuerza funcional e hipertrofia saludable.</p>
+                    <ul class="text-sm space-y-2 text-emerald-900 font-medium">
+                        <li>🏋️ <b>Frecuencia:</b> 3 a 4 días por semana.</li>
+                        <li>⏱️ <b>Estructura:</b> Ejercicios compuestos (sentadillas, flexiones) + caminatas diarias.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- El resto del archivo sigue igual (continúa con hidratación, nutrientes, etc.) -->
+    <!-- (Por brevedad, el resto no se repite pero debes mantenerlo igual a tu original) -->
+
+    <!-- Scripts JavaScript Interativos -->
+    <script>
+        // Calculadora de Agua
+        function calcularAgua() {
+            const peso = parseFloat(document.getElementById('peso-input').value);
+            const resultadoDiv = document.getElementById('resultado-agua');
+            if (!peso || peso <= 0) {
+                resultadoDiv.classList.remove('hidden');
+                resultadoDiv.innerText = 'Por favor ingresa un peso válido en kilogramos.';
+                return;
+            }
+            const litros = (peso * 0.035).toFixed(1);
+            resultadoDiv.classList.remove('hidden');
+            resultadoDiv.innerText = `Tu consumo diario estimado es de ${litros} litros de agua (${Math.round(litros * 4)} vasos de 250ml).`;
+        }
+
+        // Modales de Bienestar
+        function abrirModalBienestar(titulo, contenido) {
+            document.getElementById('modal-titulo').innerText = titulo;
+            document.getElementById('modal-texto').innerText = contenido;
+            document.getElementById('modal-bienestar').classList.remove('hidden');
+        }
+        function cerrarModalBienestar() {
+            document.getElementById('modal-bienestar').classList.add('hidden');
+        }
+
+        // Sistema de Meditación con Web Audio API (Sonidos relajantes reales generados en vivo)
+        let audioCtx = null;
+        let noiseNode = null;
+        let gainNode = null;
+        let filterNode = null;
+        let lfoNode = null;
+        let reproduciendo = false;
+
+        function toggleMeditacion() {
+            const btn = document.getElementById('btn-meditacion');
+            const status = document.getElementById('meditacion-status');
+            const tipoSonido = document.getElementById('sound-selector').value;
+
+            if (!reproduciendo) {
+                if (!audioCtx) {
+                    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                }
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+
+                const bufferSize = audioCtx.sampleRate * 5;
+                const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+                const data = buffer.getChannelData(0);
+                for (let i = 0; i < bufferSize; i++) {
+                    data[i] = Math.random() * 2 - 1;
+                }
+
+                noiseNode = audioCtx.createBufferSource();
+                noiseNode.buffer = buffer;
+                noiseNode.loop = true;
+
+                gainNode = audioCtx.createGain();
+                filterNode = audioCtx.createBiquadFilter();
+
+                if (tipoSonido === 'lluvia') {
+                    filterNode.type = 'lowpass';
+                    filterNode.frequency.setValueAtTime(1000, audioCtx.currentTime);
+                    gainNode.gain.setValueAtTime(0.25, audioCtx.currentTime);
+                } else if (tipoSonido === 'olas') {
+                    filterNode.type = 'lowpass';
+                    filterNode.frequency.setValueAtTime(500, audioCtx.currentTime);
+                    
+                    lfoNode = audioCtx.createOscillator();
+                    const lfoGain = audioCtx.createGain();
+                    lfoNode.frequency.setValueAtTime(0.2, audioCtx.currentTime);
+                    lfoGain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+                    lfoNode.connect(lfoGain);
+                    lfoGain.connect(gainNode.gain);
+                    lfoNode.start();
+                    gainNode.gain.setValueAtTime(0.05, audioCtx.currentTime);
+                } else if (tipoSonido === 'bosque') {
+                    filterNode.type = 'bandpass';
+                    filterNode.frequency.setValueAtTime(400, audioCtx.currentTime);
+                    filterNode.Q.setValueAtTime(2.0, audioCtx.currentTime);
+                    gainNode.gain.setValueAtTime(0.15, audioCtx.currentTime);
+                }
+
+                noiseNode.connect(filterNode);
+                filterNode.connect(gainNode);
+                gainNode.connect(audioCtx.destination);
+
+                noiseNode.start();
+                reproduciendo = true;
+                btn.innerText = 'Pausar Meditación Guiada';
+                status.innerText = '🧘 Reproduciendo ambiente sonoro en vivo... Respira hondo y relájate.';
+            } else {
+                detenerAudio();
+                btn.innerText = 'Reproducir Meditación Guiada (5 Min)';
+                status.innerText = 'Sesión pausada.';
+            }
+        }
+
+        function detenerAudio() {
+            if (noiseNode) {
+                try { noiseNode.stop(); } catch(e) {}
+                noiseNode.disconnect();
+                noiseNode = null;
+            }
+            if (lfoNode) {
+                try { lfoNode.stop(); } catch(e) {}
+                lfoNode.disconnect();
+                lfoNode = null;
+            }
+            reproduciendo = false;
+        }
+
+        document.getElementById('sound-selector').addEventListener('change', () => {
+            if (reproduciendo) {
+                detenerAudio();
+                toggleMeditacion();
+            }
+        });
+    </script>
+</body>
+<!-- Hidratación Inteligente con Calculadora -->
+    <section id="hidratacion" class="py-24 bg-gradient-to-r from-emerald-200/50 via-teal-100/50 to-emerald-100/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-xs font-black uppercase tracking-widest text-emerald-700 mb-3">Elemento Vital</h2>
+                    <h3 class="text-4xl sm:text-5xl font-black text-slate-900 mb-6">Hidratación Inteligente</h3>
+                    <p class="text-slate-700 text-lg mb-6 leading-relaxed">
+                        El agua conforma más del 60% de tu organismo. La deshidratación leve reduce un 20% tu rendimiento físico y mental.
+                    </p>
+                    <div class="p-6 bg-white/90 rounded-2xl border border-emerald-200 text-slate-700 space-y-3 shadow-md">
+                        <p class="flex items-center gap-3"><span class="text-emerald-600 font-bold">✓</span> Transporta nutrientes hacia las células.</p>
+                        <p class="flex items-center gap-3"><span class="text-emerald-600 font-bold">✓</span> Lubrica articulaciones y mejora la función digestiva.</p>
+                        <p class="flex items-center gap-3"><span class="text-emerald-600 font-bold">✓</span> Mantiene los niveles de electrolitos equilibrados.</p>
+                    </div>
+                </div>
+                <div class="bg-glow-card p-8 rounded-3xl border border-emerald-300 shadow-xl">
+                    <h4 class="text-2xl font-black text-slate-900 mb-4">Calculadora de Consumo de Agua Diario</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Ingresa tu peso corporal (kg):</label>
+                            <input type="number" id="peso-input" placeholder="Ej. 70" class="w-full px-4 py-3.5 rounded-xl bg-white border border-emerald-300 text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                        </div>
+                        <button onclick="calcularAgua()" class="w-full py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-black rounded-xl shadow-lg hover:scale-105 transition">
+                            Calcular Requerimiento
+                        </button>
+                        <div id="resultado-agua" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-900 font-bold text-center text-sm"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Macronutrientes -->
+    <section id="nutrientes" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-xs font-black uppercase tracking-widest text-amber-600 mb-3">Nutrición de Precisión</h2>
+            <h3 class="text-4xl sm:text-5xl font-black text-slate-900 mb-4">Macronutrientes, Micronutrientes y Fibra</h3>
+            <p class="text-slate-600 text-lg">Aprende a nutrir tus células combinando los bloques esenciales de la alimentación.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-glow-card rounded-3xl p-6 border-t-4 border-emerald-500 flex flex-col justify-between shadow-md">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=500&q=80" alt="Proteínas" class="w-full h-36 object-cover rounded-2xl mb-4">
+                    <h4 class="text-2xl font-black text-emerald-700 mb-2">Proteínas</h4>
+                    <p class="text-slate-700 text-xs leading-relaxed">Construyen tejido muscular, enzimas e inmunoglobulinas.</p>
+                </div>
+                <p class="text-xs text-emerald-600 mt-4 font-semibold">Fuentes: Huevos, pollo, salmón, lentejas.</p>
+            </div>
+            <div class="bg-glow-card rounded-3xl p-6 border-t-4 border-amber-500 flex flex-col justify-between shadow-md">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=500&q=80" alt="Carbohidratos" class="w-full h-36 object-cover rounded-2xl mb-4">
+                    <h4 class="text-2xl font-black text-amber-700 mb-2">Carbohidratos</h4>
+                    <p class="text-slate-700 text-xs leading-relaxed">Energía limpia para cerebro y músculos.</p>
+                </div>
+                <p class="text-xs text-amber-600 mt-4 font-semibold">Fuentes: Avena, quinua, camote, arroz integral.</p>
+            </div>
+            <div class="bg-glow-card rounded-3xl p-6 border-t-4 border-teal-500 flex flex-col justify-between shadow-md">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1560790671-b76ca4de55ef?auto=format&fit=crop&w=500&q=80" alt="Grasas Saludables" class="w-full h-36 object-cover rounded-2xl mb-4">
+                    <h4 class="text-2xl font-black text-teal-700 mb-2">Grasas Saludables</h4>
+                    <p class="text-slate-700 text-xs leading-relaxed">Sostén hormonal y protección de órganos.</p>
+                </div>
+                <p class="text-xs text-teal-600 mt-4 font-semibold">Fuentes: Aceite de oliva, aguacate, nueces.</p>
+            </div>
+            <div class="bg-glow-card rounded-3xl p-6 border-t-4 border-blue-500 flex flex-col justify-between shadow-md">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=500&q=80" alt="Fibra" class="w-full h-36 object-cover rounded-2xl mb-4">
+                    <h4 class="text-2xl font-black text-blue-700 mb-2">Fibra Vegetal</h4>
+                    <p class="text-slate-700 text-xs leading-relaxed">Regula tránsito intestinal y nutre microbiota.</p>
+                </div>
+                <p class="text-xs text-blue-600 mt-4 font-semibold">Fuentes: Chía, espinacas, brócoli, manzanas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diccionario de Alimentos y Vitaminas -->
+    <section class="py-24 bg-gradient-to-b from-emerald-100/60 to-emerald-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-3xl font-black text-slate-900 mb-6">Listado de Alimentos y Vitaminas</h3>
+                    <div class="bg-glow-card rounded-3xl overflow-hidden border border-emerald-200 shadow-md">
+                        <table class="w-full text-left">
+                            <thead class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-sm uppercase">
+                                <tr>
+                                    <th class="p-4 font-black">Vitamina</th>
+                                    <th class="p-4 font-black">Beneficios</th>
+                                    <th class="p-4 font-black">Alimentos</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-emerald-100 text-sm">
+                                <tr>
+                                    <td class="p-4 font-bold text-emerald-700">Vitamina A</td>
+                                    <td class="p-4 text-slate-700">Visión e inmunidad</td>
+                                    <td class="p-4 text-slate-700">Zanahoria, Espinaca, Mango</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-bold text-teal-700">Vitamina C</td>
+                                    <td class="p-4 text-slate-700">Defensas y colágeno</td>
+                                    <td class="p-4 text-slate-700">Naranja, Guayaba, Kiwi, Pimentón</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-bold text-amber-700">Vitamina D</td>
+                                    <td class="p-4 text-slate-700">Salud ósea y hormonal</td>
+                                    <td class="p-4 text-slate-700">Luz Solar, Salmón, Champiñones</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-bold text-emerald-600">Complejo B</td>
+                                    <td class="p-4 text-slate-700">Energía y sistema nervioso</td>
+                                    <td class="p-4 text-slate-700">Avena, Huevos, Lentejas, Carnes magras</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-bold text-rose-700">Vitamina E</td>
+                                    <td class="p-4 text-slate-700">Antioxidante celular</td>
+                                    <td class="p-4 text-slate-700">Almendras, Semillas de girasol</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="text-3xl font-black text-slate-900 mb-6">Buenos Hábitos, Horarios y Grasas</h3>
+                    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80" alt="Plato Saludable" class="w-full h-48 object-cover rounded-3xl mb-6 border border-emerald-200 shadow-md">
+                    <div class="space-y-4">
+                        <div class="p-5 bg-glow-card rounded-2xl border-l-4 border-emerald-500 shadow-sm">
+                            <h4 class="font-bold text-slate-900">Horarios fijos para comer</h4>
+                            <p class="text-slate-600 text-xs mt-1">Cena ligero al menos 2 horas antes de dormir para optimizar la hormona del crecimiento.</p>
+                        </div>
+                        <div class="p-5 bg-glow-card rounded-2xl border-l-4 border-teal-500 shadow-sm">
+                            <h4 class="font-bold text-slate-900">Cuidado con las Grasas Saturadas y Trans</h4>
+                            <p class="text-slate-600 text-xs mt-1">Sustituye frituras y ultraprocesados por grasas monoinsaturadas para proteger tus arterias.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recetas por Días (Lunes a Domingo) -->
+    <section id="recetas" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-xs font-black uppercase tracking-widest text-emerald-600 mb-3">Plan Alimentario</h2>
+            <h3 class="text-4xl sm:text-5xl font-black text-slate-900 mb-4">Recetas Saludables por Días</h3>
+            <p class="text-slate-600 text-lg">Ideas nutritivas, ricas en frutas y verduras para toda la semana.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-glow-card p-6 rounded-2xl border border-emerald-200 shadow-sm">
+                <span class="text-xs font-black text-emerald-600 uppercase">Lunes</span>
+                <h4 class="font-bold text-slate-900 text-lg mt-1 mb-2">Bowl Energético de Avena</h4>
+                <p class="text-slate-600 text-xs">Avena integral, arándanos, fresas, semillas de chía y crema de maní natural.</p>
+            </div>
+            <div class="bg-glow-card p-6 rounded-2xl border border-emerald-200 shadow-sm">
+                <span class="text-xs font-black text-emerald-600 uppercase">Martes</span>
+                <h4 class="font-bold text-slate-900 text-lg mt-1 mb-2">Salmón con Brócoli</h4>
+                <p class="text-slate-600 text-xs">Rico en Omega-3 con vegetales al vapor y un toque de aceite de oliva extra virgen.</p>
+            </div>
+            <div class="bg-glow-card p-6 rounded-2xl border border-emerald-200 shadow-sm">
+                <span class="text-xs font-black text-emerald-600 uppercase">Miércoles</span>
+                <h4 class="font-bold text-slate-900 text-lg mt-1 mb-2">Ensalada de Pollo y Aguacate</h4>
+                <p class="text-slate-600 text-xs">Pechuga a la plancha, espinacas baby, tomate cherry, aguacate y nueces.</p>
+            </div>
+            <div class="bg-glow-card p-6 rounded-2xl border border-emerald-200 shadow-sm">
+                <span class="text-xs font-black text-emerald-600 uppercase">Jueves</span>
+                <h4 class="font-bold text-slate-900 text-lg mt-1 mb-2">Wrap Proteico de Lechuga</h4>
+                <p class="text-slate-600 text-xs">Carne magra salteada con pimentón y envuelta en hojas crujientes de lechuga.</p>
+            </div>
+            <div class="bg-glow-card p-6 rounded-2xl border border-emerald-200 shadow-sm">
+                <span class="text-xs font-black text-emerald-600 uppercase">Viernes</span>
+                <h4 class="font-bold text-slate-900 text-lg mt-1 mb-2">Pasta Integral al Pesto</h4>
+                <p class="text-slate-600 text-xs">Pasta de grano entero con salsa de albahaca fresca, almendras y ajo.</p>
+            </div>
+            <div class="bg-glow-card p-6 rounded-2xl border border-emerald-200 shadow-sm">
+                <span class="text-xs font-black text-emerald-600 uppercase">Sábado</span>
+                <h4 class="font-bold text-slate-900 text-lg mt-1 mb-2">Omelet de Verduras</h4>
+                <p class="text-slate-600 text-xs">Huevos, champiñones, espinacas salteadas y tostada de pan de masa madre.</p>
+            </div>
+            <div class="bg-glow-card p-6 rounded-2xl border border-emerald-200 shadow-sm">
+                <span class="text-xs font-black text-emerald-600 uppercase">Domingo</span>
+                <h4 class="font-bold text-slate-900 text-lg mt-1 mb-2">Pescado Blanco al Horno</h4>
+                <p class="text-slate-600 text-xs">Filete horneado con hierbas finas, limón, ensalada mixta y puré de papa o yuca.</p>
+            </div>
+            <div class="bg-gradient-to-br from-emerald-600 to-amber-500 p-6 rounded-2xl flex flex-col justify-center items-center text-center text-white shadow-md">
+                <h4 class="font-black text-lg mb-1">¡Aumenta Frutas y Verduras!</h4>
+                <p class="text-xs font-bold">Consume al menos 5 porciones variadas al día.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dietas Clínicas y Enfermedades Sociales -->
+    <section id="enfermedades" class="py-24 bg-gradient-to-b from-emerald-50 via-emerald-100/50 to-emerald-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-black uppercase tracking-widest text-emerald-700 mb-3">Salud Integral</h2>
+                <h3 class="text-4xl sm:text-5xl font-black text-slate-900 mb-4">Dietas para Enfermedades Clínicas y Sociales</h3>
+                <p class="text-slate-600 text-lg">Pautas científicas adaptadas para condiciones físicas y del entorno moderno.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Clínicas -->
+                <div class="bg-glow-card p-8 rounded-3xl border border-rose-300 shadow-md">
+                    <h4 class="text-2xl font-black text-rose-700 mb-6 flex items-center gap-3">
+                        <span>🏥</span> Enfermedades Clínicas
+                    </h4>
+                    <div class="space-y-4">
+                        <div class="p-5 bg-white rounded-2xl border border-rose-100 shadow-sm">
+                            <h5 class="font-bold text-slate-900">Hipertensión Arterial</h5>
+                            <p class="text-slate-600 text-xs mt-1">Enfoque DASH: Reducción drástica del sodio y aumento de magnesio y potasio (plátano, espinacas).</p>
+                        </div>
+                        <div class="p-5 bg-white rounded-2xl border border-rose-100 shadow-sm">
+                            <h5 class="font-bold text-slate-900">Diabetes Tipo 1 y 2</h5>
+                            <p class="text-slate-600 text-xs mt-1">Alimentos con bajo índice glucémico y fibra abundante para estabilizar los niveles de glucosa en sangre.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sociales -->
+                <div class="bg-glow-card p-8 rounded-3xl border border-teal-300 shadow-md">
+                    <h4 class="text-2xl font-black text-teal-700 mb-6 flex items-center gap-3">
+                        <span>🌐</span> Enfermedades Sociales
+                    </h4>
+                    <div class="space-y-4">
+                        <div class="p-5 bg-white rounded-2xl border border-teal-100 shadow-sm">
+                            <h5 class="font-bold text-slate-900">Sedentarismo y Obesidad</h5>
+                            <p class="text-slate-600 text-xs mt-1">Causados por largas jornadas de oficina. Solución: Pausas activas cada hora y meta de 10,000 pasos al día.</p>
+                        </div>
+                        <div class="p-5 bg-white rounded-2xl border border-teal-100 shadow-sm">
+                            <h5 class="font-bold text-slate-900">Estrés Crónico y Agotamiento (Burnout)</h5>
+                            <p class="text-slate-600 text-xs mt-1">Causado por la hiperconexión. Solución: Desconexión digital nocturna, meditación y magnesio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Suplementos y Meditación con Web Audio API -->
+    <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Suplementos -->
+            <div class="bg-glow-card p-8 rounded-3xl border border-amber-300 shadow-md">
+                <h3 class="text-2xl font-black text-amber-700 mb-6">Guía de Suplementos</h3>
+                <div class="space-y-4">
+                    <div class="p-4 bg-white rounded-2xl border border-amber-100 shadow-sm">
+                        <h4 class="font-bold text-slate-900">Vitamina D3 + K2</h4>
+                        <p class="text-slate-600 text-xs mt-1">Fundamental para la fijación del calcio en los huesos y la regulación inmunológica.</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-2xl border border-amber-100 shadow-sm">
+                        <h4 class="font-bold text-slate-900">Creatina Monohidratada</h4>
+                        <p class="text-slate-600 text-xs mt-1">Aumenta la fuerza muscular y la energía cognitiva cerebral en el día a día.</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-2xl border border-amber-100 shadow-sm">
+                        <h4 class="font-bold text-slate-900">Omega-3 (EPA/DHA)</h4>
+                        <p class="text-slate-600 text-xs mt-1">Antiinflamatorio natural para proteger articulaciones y salud cardiovascular.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Meditación Funcional Interactiva (Web Audio API) -->
+            <div class="bg-gradient-to-br from-emerald-800 to-teal-900 p-8 rounded-3xl border border-emerald-500/30 flex flex-col justify-between shadow-xl text-white">
+                <div>
+                    <h3 class="text-2xl font-black text-emerald-300 mb-4">Espacio de Meditación & Mindfulness</h3>
+                    <p class="text-emerald-100 text-sm mb-6 leading-relaxed">
+                        Selecciona un ambiente sonoro sintetizado en vivo para calmar la mente y relajarte profundamente. ¡Suena al instante sin errores de red!
+                    </p>
+                    
+                    <!-- Selector de Sonidos Relajantes -->
+                    <label class="block text-xs font-bold text-emerald-300 mb-2">Elige tu ambiente sonoro:</label>
+                    <select id="sound-selector" class="w-full bg-emerald-950 border border-emerald-500/40 text-white p-3.5 rounded-xl mb-4 focus:outline-none font-medium text-sm">
+                        <option value="lluvia">🌧️ Lluvia Suave (Ruido Rosa filtrado)</option>
+                        <option value="olas">🌊 Olas del Mar (Efecto de marea rítmica)</option>
+                        <option value="bosque">🌲 Brisa del Bosque Zen</option>
+                    </select>
+
+                    <div id="meditacion-status" class="text-xs font-bold text-emerald-300 mb-4">Estado: Reproductor listo. Haz clic abajo para iniciar.</div>
+                </div>
+                <button id="btn-meditacion" onclick="toggleMeditacion()" class="w-full py-5 bg-gradient-to-r from-emerald-400 to-teal-400 text-slate-950 font-black rounded-2xl shadow-xl hover:scale-105 transition flex items-center justify-center gap-3">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    Reproducir Meditación Guiada (5 Min)
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opiniones de Expertos -->
+    <section id="expertos" class="py-24 bg-emerald-100/60 border-t border-emerald-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-black uppercase tracking-widest text-emerald-700 mb-3">Aval Científico</h2>
+                <h3 class="text-4xl sm:text-5xl font-black text-slate-900 mb-4">Opiniones de Expertos</h3>
+                <p class="text-slate-600 text-lg">Profesionales respaldan nuestras guías informativas.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-glow-card p-8 rounded-3xl border border-emerald-200 shadow-md flex flex-col justify-between">
+                    <p class="text-slate-700 italic text-sm mb-6">"Bienestar pa' su merce acerca conceptos científicos de nutrición y ejercicio a la comunidad de forma clara y accesible."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=200&q=80" alt="Dr. Gómez" class="w-14 h-14 rounded-full object-cover border-2 border-emerald-600">
+                        <div>
+                            <h4 class="font-bold text-slate-900">Dr. Alejandro Gómez</h4>
+                            <p class="text-xs text-emerald-700 font-bold">Médico Endocrinólogo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-glow-card p-8 rounded-3xl border border-emerald-200 shadow-md flex flex-col justify-between">
+                    <p class="text-slate-700 italic text-sm mb-6">"Los menús de recetas equilibradas son una excelente orientación para personas que buscan mejorar sus hábitos."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" alt="Lic. Valeria Silva" class="w-14 h-14 rounded-full object-cover border-2 border-teal-600">
+                        <div>
+                            <h4 class="font-bold text-slate-900">Lic. Valeria Silva</h4>
+                            <p class="text-xs text-teal-700 font-bold">Nutricionista Clínica</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-glow-card p-8 rounded-3xl border border-emerald-200 shadow-md flex flex-col justify-between">
+                    <p class="text-slate-700 italic text-sm mb-6">"Las rutinas en casa se adaptan perfectamente a personas con poco tiempo y eliminan cualquier excusa para entrenar."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=200&q=80" alt="Carlos Ramírez" class="w-14 h-14 rounded-full object-cover border-2 border-amber-600">
+                        <div>
+                            <h4 class="font-bold text-slate-900">Carlos Ramírez</h4>
+                            <p class="text-xs text-amber-700 font-bold">Coach Deportivo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para las tarjetas de Bienestar -->
+    <div id="modal-bienestar" class="hidden fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-white border border-emerald-300 p-8 rounded-3xl max-w-lg w-full relative shadow-2xl">
+            <button onclick="cerrarModalBienestar()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-800 text-2xl font-black">&times;</button>
+            <h3 id="modal-titulo" class="text-2xl font-black text-emerald-700 mb-4">Título</h3>
+            <p id="modal-texto" class="text-slate-700 text-sm leading-relaxed mb-6">Contenido detallado...</p>
+            <button onclick="cerrarModalBienestar()" class="w-full py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-black rounded-xl">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-950 text-emerald-200 py-12 border-t border-emerald-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-400 to-teal-400 flex items-center justify-center text-slate-950 font-black">
+                    BpsM
+                </div>
+                <span class="font-black text-xl text-white">Bienestar <span class="text-amber-400">pa'</span> su merce</span>
+            </div>
+            <p class="text-xs text-center text-emerald-300">
+                &copy; 2026 Bienestar pa' su merce. Plataforma educativa 100% gratuita para promover hábitos de vida saludable.
+            </p>
+            <div class="flex space-x-6 text-xs font-bold text-emerald-300">
+                <a href="#bienestar" class="hover:text-white transition">Inicio</a>
+                <a href="#ejercicios" class="hover:text-white transition">Ejercicios</a>
+                <a href="#nutrientes" class="hover:text-white transition">Nutrición</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript Interativos -->
+   <script>
+   // Calculadora de Agua
+        function calcularAgua() {
+            const peso = parseFloat(document.getElementById('peso-input').value);
+            const resultadoDiv = document.getElementById('resultado-agua');
+            if (!peso || peso <= 0) {
+                resultadoDiv.classList.remove('hidden');
+                resultadoDiv.innerText = 'Por favor ingresa un peso válido en kilogramos.';
+                return;
+            }
+            const litros = (peso * 0.035).toFixed(1);
+            resultadoDiv.classList.remove('hidden');
+            resultadoDiv.innerText = `Tu consumo diario estimado es de ${litros} litros de agua (${Math.round(litros * 4)} vasos de 250ml).`;
+        }
+
+        // Modales de Bienestar
+        function abrirModalBienestar(titulo, contenido) {
+            document.getElementById('modal-titulo').innerText = titulo;
+            document.getElementById('modal-texto').innerText = contenido;
+            document.getElementById('modal-bienestar').classList.remove('hidden');
+        }
+        function cerrarModalBienestar() {
+            document.getElementById('modal-bienestar').classList.add('hidden');
+        }
+
+        // Sistema de Meditación con Web Audio API (Sonidos relajantes reales generados en vivo)
+        let audioCtx = null;
+        let noiseNode = null;
+        let gainNode = null;
+        let filterNode = null;
+        let lfoNode = null;
+        let reproduciendo = false;
+
+        function toggleMeditacion() {
+            const btn = document.getElementById('btn-meditacion');
+            const status = document.getElementById('meditacion-status');
+            const tipoSonido = document.getElementById('sound-selector').value;
+
+            if (!reproduciendo) {
+                if (!audioCtx) {
+                    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                }
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+
+                const bufferSize = audioCtx.sampleRate * 5;
+                const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+                const data = buffer.getChannelData(0);
+                for (let i = 0; i < bufferSize; i++) {
+                    data[i] = Math.random() * 2 - 1;
+                }
+
+                noiseNode = audioCtx.createBufferSource();
+                noiseNode.buffer = buffer;
+                noiseNode.loop = true;
+
+                gainNode = audioCtx.createGain();
+                filterNode = audioCtx.createBiquadFilter();
+
+                if (tipoSonido === 'lluvia') {
+                    filterNode.type = 'lowpass';
+                    filterNode.frequency.setValueAtTime(1000, audioCtx.currentTime);
+                    gainNode.gain.setValueAtTime(0.25, audioCtx.currentTime);
+                } else if (tipoSonido === 'olas') {
+                    filterNode.type = 'lowpass';
+                    filterNode.frequency.setValueAtTime(500, audioCtx.currentTime);
+                    
+                    lfoNode = audioCtx.createOscillator();
+                    const lfoGain = audioCtx.createGain();
+                    lfoNode.frequency.setValueAtTime(0.2, audioCtx.currentTime);
+                    lfoGain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+                    lfoNode.connect(lfoGain);
+                    lfoGain.connect(gainNode.gain);
+                    lfoNode.start();
+                    gainNode.gain.setValueAtTime(0.05, audioCtx.currentTime);
+                } else if (tipoSonido === 'bosque') {
+                    filterNode.type = 'bandpass';
+                    filterNode.frequency.setValueAtTime(400, audioCtx.currentTime);
+                    filterNode.Q.setValueAtTime(2.0, audioCtx.currentTime);
+                    gainNode.gain.setValueAtTime(0.15, audioCtx.currentTime);
+                }
+
+                noiseNode.connect(filterNode);
+                filterNode.connect(gainNode);
+                gainNode.connect(audioCtx.destination);
+
+                noiseNode.start();
+                reproduciendo = true;
+                btn.innerText = 'Pausar Meditación Guiada';
+                status.innerText = '🧘 Reproduciendo ambiente sonoro en vivo... Respira hondo y relájate.';
+            } else {
+                detenerAudio();
+                btn.innerText = 'Reproducir Meditación Guiada (5 Min)';
+                status.innerText = 'Sesión pausada.';
+            }
+        }
+
+        function detenerAudio() {
+            if (noiseNode) {
+                try { noiseNode.stop(); } catch(e) {}
+                noiseNode.disconnect();
+                noiseNode = null;
+            }
+            if (lfoNode) {
+                try { lfoNode.stop(); } catch(e) {}
+                lfoNode.disconnect();
+                lfoNode = null;
+            }
+            reproduciendo = false;
+        }
+
+        document.getElementById('sound-selector').addEventListener('change', () => {
+            if (reproduciendo) {
+                detenerAudio();
+                toggleMeditacion();
+            }
+        });
+    </script>
+</body>
+</html>
